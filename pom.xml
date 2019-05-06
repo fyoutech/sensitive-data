@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.hujiang</groupId>
+        <artifactId>foe-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.hujiang.foe</groupId>
+    <artifactId>sensitive-data</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <description>用于对敏感信息做处理的工具类</description>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+        </dependency>
+    </dependencies>
+
+    <scm>
+        <connection>${git.conn}</connection>
+        <developerConnection>${git.conn}</developerConnection>
+        <url>${git.url}</url>
+        <tag>HEAD</tag>
+    </scm>
+
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <!-- release插件 -->
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-release-plugin</artifactId>
+                    <version>2.5.3</version>
+                    <configuration>
+                        <tagBase>${git.conn}</tagBase>
+                        <branchBase>${git.conn}</branchBase>
+                        <username>${git.username}</username>
+                        <password>${git.password}</password>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+
+    <!-- 分发管理 -->
+    <distributionManagement>
+        <repository>
+            <id>${distribution.releases.id}</id>
+            <url>${distribution.releases.url}</url>
+        </repository>
+        <snapshotRepository>
+            <id>${distribution.snapshots.id}</id>
+            <url>${distribution.snapshots.url}</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>
