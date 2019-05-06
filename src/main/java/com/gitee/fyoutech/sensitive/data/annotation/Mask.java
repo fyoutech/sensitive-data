@@ -1,4 +1,4 @@
-package com.gitee.fyoutech.sensitive.data.anno;
+package com.gitee.fyoutech.sensitive.data.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

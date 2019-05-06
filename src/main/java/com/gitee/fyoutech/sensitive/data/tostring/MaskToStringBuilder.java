@@ -1,6 +1,6 @@
 package com.gitee.fyoutech.sensitive.data.tostring;
 
-import com.gitee.fyoutech.sensitive.data.anno.Mask;
+import com.gitee.fyoutech.sensitive.data.annotation.Mask;
 import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
 
