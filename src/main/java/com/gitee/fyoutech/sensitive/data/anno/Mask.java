@@ -1,4 +1,4 @@
-package com.hujiang.foe.sensitive.data.anno;
+package com.gitee.fyoutech.sensitive.data.anno;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

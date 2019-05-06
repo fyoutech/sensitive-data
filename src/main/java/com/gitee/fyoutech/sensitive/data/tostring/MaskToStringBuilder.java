@@ -1,6 +1,6 @@
-package com.hujiang.foe.sensitive.data.tostring;
+package com.gitee.fyoutech.sensitive.data.tostring;
 
-import com.hujiang.foe.sensitive.data.anno.Mask;
+import com.gitee.fyoutech.sensitive.data.anno.Mask;
 import org.apache.commons.lang.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang.builder.ToStringStyle;
 
