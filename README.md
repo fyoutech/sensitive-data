@@ -14,7 +14,7 @@
 #### gitee地址
 > https://gitee.com/fyoutech/sensitive-data.git
 
-> git clone git@gitlab.yeshj.com:foe/architecture.git
+> git clone https://gitee.com/fyoutech/sensitive-data.git
 
 > cd sensitive-data
 
