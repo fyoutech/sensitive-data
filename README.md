@@ -25,7 +25,7 @@
 <dependency>
 	<groupId>com.gitee.fyoutech</groupId>
 	<artifactId>sensitive-data</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>2.0.0-SNAPSHOT</version>
 </dependency>
 ```
 
