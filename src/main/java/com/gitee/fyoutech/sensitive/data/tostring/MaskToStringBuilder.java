@@ -21,6 +21,7 @@ public class MaskToStringBuilder extends ReflectionToStringBuilder {
     }
 
     protected void appendFieldsIn(Class clazz) {
+
         if (clazz.isArray()) {
             this.reflectionAppendArray(this.getObject());
         } else {
