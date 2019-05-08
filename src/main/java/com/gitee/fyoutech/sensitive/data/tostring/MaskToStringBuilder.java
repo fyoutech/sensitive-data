@@ -8,6 +8,8 @@ import java.lang.reflect.AccessibleObject;
 import java.lang.reflect.Field;
 
 /**
+ * MaskToString实现
+ *
  * @author ipanocloud
  * @since 2019-05-06 11:16
  */
@@ -28,16 +30,16 @@ public class MaskToStringBuilder extends ReflectionToStringBuilder {
             Field[] fields = clazz.getDeclaredFields();
             AccessibleObject.setAccessible(fields, true);
 
-            for(int i = 0; i < fields.length; ++i) {
+            for (int i = 0; i < fields.length; ++i) {
                 Field field = fields[i];
                 String fieldName = field.getName();
                 if (this.accept(field)) {
                     try {
                         Object fieldValue = this.getValue(field);
                         if (fieldValue != null) {
-                            Mask anno = (Mask)field.getAnnotation(Mask.class);
+                            Mask anno = (Mask) field.getAnnotation(Mask.class);
                             if (anno != null && field.getType() == String.class) {
-                                String strFieldVal = (String)fieldValue;
+                                String strFieldVal = (String) fieldValue;
                                 int length = strFieldVal.length();
                                 int totalNoMaskLen = anno.prefixNoMaskLen() + anno.suffixNoMaskLen();
                                 if (totalNoMaskLen == 0) {
@@ -47,7 +49,7 @@ public class MaskToStringBuilder extends ReflectionToStringBuilder {
                                 if (totalNoMaskLen < length) {
                                     StringBuilder sb = new StringBuilder();
 
-                                    for(int j = 0; j < strFieldVal.length(); ++j) {
+                                    for (int j = 0; j < strFieldVal.length(); ++j) {
                                         if (j < anno.prefixNoMaskLen()) {
                                             sb.append(strFieldVal.charAt(j));
                                         } else if (j > strFieldVal.length() - anno.suffixNoMaskLen() - 1) {
@@ -75,7 +77,7 @@ public class MaskToStringBuilder extends ReflectionToStringBuilder {
     private String fillMask(String maskStr, int length) {
         StringBuilder sb = new StringBuilder();
 
-        for(int i = 0; i < length; ++i) {
+        for (int i = 0; i < length; ++i) {
             sb.append(maskStr);
         }
 
