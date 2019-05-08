@@ -12,6 +12,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.FIELD})
 public @interface Mask {
+
     int prefixNoMaskLen() default 0;
 
     int suffixNoMaskLen() default 0;

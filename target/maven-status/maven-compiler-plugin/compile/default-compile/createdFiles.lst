@@ -1,2 +1,4 @@
+com/gitee/fyoutech/sensitive/data/model/BaseRequest.class
 com/gitee/fyoutech/sensitive/data/tostring/MaskToStringBuilder.class
+com/gitee/fyoutech/sensitive/data/model/BaseResponse.class
 com/gitee/fyoutech/sensitive/data/annotation/Mask.class
